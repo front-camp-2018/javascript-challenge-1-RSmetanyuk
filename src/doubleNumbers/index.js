@@ -1,22 +1,13 @@
 /* eslint-disable-next-line */
 export const doubleNum = num => {
-  const numArr = num.toString().split('');
-  const length = numArr.length;
-  let double = false;
-  
-  if (!(length % 2)) {
-    double = true;
-    for (let i = 0; i < length / 2; i++) {
-      if (numArr[i] !== numArr[i + length / 2]) {
-        double = false;
-        break;
-      }
-    }
-  }
+  const str = num.toString();
+  const length = str.length;
+  const num1 = str.slice(0, length / 2);
+  const num2 = str.slice(length / 2);
 
-  if (double) {
+  if (num1 === num2) {
     return num;
   } else {
-    return (num * 2);
+    return num * 2;
   }
 };
