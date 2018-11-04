@@ -5,9 +5,5 @@ export const doubleNum = num => {
   const num1 = str.slice(0, length / 2);
   const num2 = str.slice(length / 2);
 
-  if (num1 === num2) {
-    return num;
-  } else {
-    return num * 2;
-  }
+  return num1 === num2 ? num :  num * 2; 
 };
